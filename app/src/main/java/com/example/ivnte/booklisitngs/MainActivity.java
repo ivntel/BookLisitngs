@@ -41,7 +41,6 @@ import java.util.HashMap;
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_main);
-         isNetworkAvailable();
 
          Button but = (Button) findViewById(R.id.search_button);
          noResults = (TextView) findViewById(R.id.no_results);
@@ -58,7 +57,12 @@ import java.util.HashMap;
                  String APIKEY = "&key=AIzaSyA1h9z38G2ZmIfvDgKmhh-t9a07zfVlYRY";
                  booksURL = "https://www.googleapis.com/books/v1/volumes?q=" + inputSearch + "&orderBy=newest";
                  Log.v("URL:", booksURL);
-                 new ProcessJSON().execute(booksURL);
+                 if (!isNetworkAvailable()){
+                     Toast toast1 =
+                             Toast.makeText(getApplicationContext(), "There isn't any internet connecion availble." +
+                                     "Please, check your connectivity and try again", Toast.LENGTH_LONG);toast1.show();
+                 }else
+                     new ProcessJSON().execute(booksURL);
              }
          });
      }
