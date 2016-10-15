@@ -6,20 +6,22 @@
     android:padding="5dp">
 
     <TextView
-        android:id="@+id/bookTitle"
+        android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1.5"
         android:gravity="center"
-        android:textSize="18sp">
+        android:textSize="16sp"
+        android:textStyle="bold">
     </TextView>
 
     <TextView
-        android:id="@+id/bookAuthors"
+        android:id="@+id/authors"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:textSize="18sp" />
+        android:textSize="16sp"
+        android:textStyle="italic"/>
 
 </LinearLayout>

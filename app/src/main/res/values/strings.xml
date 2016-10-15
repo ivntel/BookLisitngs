@@ -2,5 +2,7 @@
     <string name="app_name">Book Lisitngs</string>
     <string name="enter_search_text">Enter search text</string>
     <string name="search">Search</string>
-    <string name="no_results">No results found</string>
+    <string name="no_results">Enter item in above search bar</string>
+    <string name="titles">TITLES</string>
+    <string name="authors">AUTHORS</string>
 </resources>
